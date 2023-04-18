@@ -1571,6 +1571,13 @@
   dependencies:
     lodash.throttle "^4.1.1"
 
+"@uppy/utils@^5.3.0":
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/@uppy/utils/-/utils-5.3.0.tgz#60803328536da73a11c8e747ed365c903b6a5f7e"
+  integrity sha512-tPW+HtRkjanFQAa/XD2e6kjJ7ZeMHtVxEVeBeRtKTnltsCA9kNF2gDwxtUVPEWyLrKzW+CvRm60NDiOKaWUuww==
+  dependencies:
+    lodash.throttle "^4.1.1"
+
 "@uppy/xhr-upload@^2.1.2":
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/@uppy/xhr-upload/-/xhr-upload-2.1.2.tgz#0f644e3371b611b10cd5ddbd7d799ab9f88a3786"
