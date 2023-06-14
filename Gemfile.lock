@@ -105,7 +105,7 @@ GEM
     coderay (1.1.3)
     colored2 (3.1.2)
     concurrent-ruby (1.1.10)
-    connection_pool (2.3.0)
+    connection_pool (2.4.1)
     cose (1.2.1)
       cbor (~> 0.5.9)
       openssl-signature_algorithm (~> 1.0)
@@ -118,7 +118,7 @@ GEM
     debug_inspector (1.1.0)
     diff-lcs (1.5.0)
     diffy (3.4.2)
-    digest (3.1.0)
+    digest (3.0.0)
     discourse-ember-rails (0.18.6)
       active_model_serializers
       ember-data-source (>= 1.0.0.beta.5)
@@ -251,7 +251,7 @@ GEM
       timeout
     net-protocol (0.1.3)
       timeout
-    net-smtp (0.3.1)
+    net-smtp (0.2.2)
       digest
       net-protocol
       timeout
@@ -364,6 +364,8 @@ GEM
       optimist (>= 3.0.0)
     rchardet (1.8.0)
     redis (4.7.1)
+    redis-client (0.14.1)
+      connection_pool
     redis-namespace (1.9.0)
       redis (>= 4)
     regexp_parser (2.6.0)
@@ -452,10 +454,11 @@ GEM
       websocket (~> 1.0)
     shoulda-matchers (5.2.0)
       activesupport (>= 5.2.0)
-    sidekiq (6.5.7)
-      connection_pool (>= 2.2.5)
-      rack (~> 2.0)
-      redis (>= 4.5.0, < 5)
+    sidekiq (7.1.2)
+      concurrent-ruby (< 2)
+      connection_pool (>= 2.3.0)
+      rack (>= 2.2.4)
+      redis-client (>= 0.14.0)
     simplecov (0.21.2)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -548,6 +551,7 @@ DEPENDENCIES
   cppjieba_rb
   css_parser
   diffy
+  digest (= 3.0.0)
   discourse-ember-rails (= 0.18.6)
   discourse-ember-source (~> 3.12.2)
   discourse-fonts
@@ -591,6 +595,9 @@ DEPENDENCIES
   multi_json
   mustache
   net-http
+  net-imap (~> 0.2.1)
+  net-pop (~> 0.1.1)
+  net-smtp (~> 0.2.1)
   nokogiri
   oj (= 3.13.14)
   omniauth
