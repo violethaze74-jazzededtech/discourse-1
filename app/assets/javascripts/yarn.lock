@@ -1520,15 +1520,24 @@
     "@uppy/companion-client" "^2.2.1"
     "@uppy/utils" "^4.1.0"
 
-"@uppy/aws-s3@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@uppy/aws-s3/-/aws-s3-2.2.1.tgz#b097103bb3cdc96f9b3fc97089f12254a7dce2fb"
-  integrity sha512-nGRdXWOFNpYU31bD1gcLK1i8ClY7tRvvsSR70bzYI5gFC2Vw07sHk6Tc3yKi9doQoWJ3OnE3IilvfK3iZ/NRmg==
+"@uppy/aws-s3-multipart@^3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@uppy/aws-s3-multipart/-/aws-s3-multipart-3.4.1.tgz#3d3ee32ea6ebc15b3f972e50367b48bfbb239ade"
+  integrity sha512-uwpb1FF72U075gxmH2pKM15W0KABq9/PSOoHXNIJer3I7aDlS/LqnpNG1tFlD/3aDKrpqzCyqnH3GtAG5wS2/A==
   dependencies:
-    "@uppy/companion-client" "^2.2.1"
-    "@uppy/utils" "^4.1.0"
-    "@uppy/xhr-upload" "^2.1.2"
-    nanoid "^3.1.25"
+    "@uppy/companion-client" "^3.2.0"
+    "@uppy/utils" "^5.4.0"
+
+"@uppy/aws-s3@^3.2.1":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@uppy/aws-s3/-/aws-s3-3.2.1.tgz#773a43c1ebc02247255a897c32547b152c09ab50"
+  integrity sha512-7Jy43+cBwwPbpNJ3NxuLH0uWFp+CTmZi+qrNOlM5UASrK0jB/a9hGOewWkH3GdcFG3od9MEVXTd5UAeHF1UyTQ==
+  dependencies:
+    "@uppy/aws-s3-multipart" "^3.4.1"
+    "@uppy/companion-client" "^3.2.0"
+    "@uppy/utils" "^5.4.0"
+    "@uppy/xhr-upload" "^3.3.1"
+    nanoid "^4.0.0"
 
 "@uppy/companion-client@^2.2.1":
   version "2.2.1"
@@ -1536,6 +1545,14 @@
   integrity sha512-Y3E10NJLMfp/wjgthNhx3gJtT67fzFCPNPFwpNNRs5iJsW6PANhJ420eyMUFzfmEZ56ZzGYxr5pzJZx8YxHICQ==
   dependencies:
     "@uppy/utils" "^4.1.0"
+    namespace-emitter "^2.0.1"
+
+"@uppy/companion-client@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@uppy/companion-client/-/companion-client-3.2.0.tgz#c949dcf271bcd0f1c6934e7c1266f69b219ace57"
+  integrity sha512-HNoAZaVfZa+/WNx5m8OP5Fa26/8ne403HaaSPdx7Df6BKURsBFfPg+wOKWyqfAEfrtupr8R8LO7P3sRhx6mStA==
+  dependencies:
+    "@uppy/utils" "^5.4.0"
     namespace-emitter "^2.0.1"
 
 "@uppy/core@^2.3.1":
@@ -1571,6 +1588,13 @@
   dependencies:
     lodash.throttle "^4.1.1"
 
+"@uppy/utils@^5.4.0":
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/@uppy/utils/-/utils-5.4.0.tgz#1f0816334ef8cfe3eaaf7c6a1d3dc28ac9bbced8"
+  integrity sha512-X9f43OvTcymhoiDEzA2CqH7W5pADTVv2bhQ/9NUaVwYRLUadDjZc27ZgnNraKSYgnOhKFJlC63nyCwcd0yaQIQ==
+  dependencies:
+    lodash "^4.17.21"
+
 "@uppy/xhr-upload@^2.1.2":
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/@uppy/xhr-upload/-/xhr-upload-2.1.2.tgz#0f644e3371b611b10cd5ddbd7d799ab9f88a3786"
@@ -1579,6 +1603,15 @@
     "@uppy/companion-client" "^2.2.1"
     "@uppy/utils" "^4.1.0"
     nanoid "^3.1.25"
+
+"@uppy/xhr-upload@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@uppy/xhr-upload/-/xhr-upload-3.3.1.tgz#eea555b06d8c14c5699f2bebc7f3244546eccac9"
+  integrity sha512-LcZvyKVQ0gWNgv3yK7CUAM9AiAQDvqBNxLhWlJxzPjAR9FIBCL9+XpyAgsjg+APAZgk55S6sVSiVV3sXRk44HA==
+  dependencies:
+    "@uppy/companion-client" "^3.2.0"
+    "@uppy/utils" "^5.4.0"
+    nanoid "^4.0.0"
 
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
@@ -8072,6 +8105,11 @@ nanoid@^3.1.25, nanoid@^3.1.30:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.2.0.tgz#62667522da6673971cca916a6d3eff3f415ff80c"
   integrity sha512-fmsZYa9lpn69Ad5eDn7FMcnnSR+8R34W9qJEijxYhTbfOWzr22n1QxCMzXLK+ODyW2973V3Fux959iQoUxzUIA==
+
+nanoid@^4.0.0:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-4.0.2.tgz#140b3c5003959adbebf521c170f282c5e7f9fb9e"
+  integrity sha512-7ZtY5KTCNheRGfEFxnedV5zFiORN1+Y1N6zvPTnHQd8ENUvfaDBeuJDZb2bN/oXwXxu3qkTXDzy57W5vAmDTBw==
 
 nanomatch@^1.2.9:
   version "1.2.13"
